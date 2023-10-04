@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Optional: Set a height if needed */
+    margin-top: 5%;
+  }
+  
+  .centered-div {
+    /* Your styles for the centered div */
+  }
+  
