@@ -1,4 +1,4 @@
-export class Post{
+export class  Post{
     constructor(
         public picture: string, 
         public name: string, 

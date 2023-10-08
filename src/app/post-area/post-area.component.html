@@ -1,17 +1,23 @@
+<!-- post-area.component.html -->
 <div class="container">
-    <table>
+    <table class="table">
         <thead>
             <tr>
-                <th class="checkbox">Select</th>
-                <th>Picture</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Actions</th>
+                <th *ngFor="let column of columns" [ngClass]="{'checkbox': column === 'Select'}">
+                    {{ column }}
+                </th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let post of listOfShoes; let i = index">
-                <app-post [post]="post" [index]="i" ></app-post>
+            <tr *ngFor="let post of listOfShoes" >
+                <td class="checkbox"><input type="checkbox"></td>
+                <td><img [src]="post?.picture" width="200" height="100"></td>
+                <td>{{ post?.name }}</td>
+                <td>₱{{ post?.price }}</td>
+                <td>
+                    <button class="btn btn-primary">Modify</button>
+                    <button class="btn btn-danger">Delete</button>
+                </td>
             </tr>
         </tbody>
     </table>

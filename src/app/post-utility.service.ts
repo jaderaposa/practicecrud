@@ -6,7 +6,9 @@ import { Post } from "./post.model";
 })
 export class PostUtility {
 
+    columns = ['Select','Picture','Name','Price','Actions'];
     listOfShoes: Post[] = [
+        new Post("https://images.pexels.com/photos/19090/pexels-photo.jpg?cs=srgb&dl=pexels-web-donut-19090.jpg&fm=jpg","Jordan 200",450),
         new Post("https://images.pexels.com/photos/19090/pexels-photo.jpg?cs=srgb&dl=pexels-web-donut-19090.jpg&fm=jpg","Jordan 200",450),
         ];
         getProduct(){

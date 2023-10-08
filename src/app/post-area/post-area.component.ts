@@ -11,6 +11,7 @@ import { PostUtility } from '../post-utility.service';
 export class PostAreaComponent implements OnInit {
 
   n=0;
+  columns: string[] = [];
   listOfShoes: Post[]=[];
   constructor(
     private postUtility: PostUtility
@@ -18,6 +19,7 @@ export class PostAreaComponent implements OnInit {
 
 
   ngOnInit(): void{
+    this.columns = this.postUtility.columns;
     this.listOfShoes=this.postUtility.getProduct();
   }
 }

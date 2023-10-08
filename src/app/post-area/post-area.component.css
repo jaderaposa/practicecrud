@@ -13,7 +13,7 @@ table {
 th, td {
     padding: 10px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
 }
 
 tr th:nth-child(1) {
@@ -24,9 +24,11 @@ tr th:nth-child(1) {
         width: 20%;
     }
 
-tr td:nth-child(5) {
-    display: flex;
-    justify-content: center;
+tr td button {
+    margin-right: 1rem;
+}
+
+tr td:nth-child(5){
     gap: 1rem;
 }
 
