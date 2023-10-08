@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from '../post.model';
+import { PostUtility } from '../post-utility.service';
 
 
 @Component({
@@ -8,10 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostAreaComponent implements OnInit {
 
-
+  n=0;
+  listOfShoes: Post[]=[];
+  constructor(
+    private postUtility: PostUtility
+  ){}
 
 
   ngOnInit(): void{
-
+    this.listOfShoes=this.postUtility.getProduct();
   }
 }
