@@ -9,7 +9,6 @@ import { PostAreaComponent } from './post-area/post-area.component';
 import { Routes, RouterModule } from '@angular/router';
 import { PostDagdagComponent } from './post-dagdag/post-dagdag.component';
 import { PostBaguhonComponent } from './post-baguhon/post-baguhon.component';
-import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -32,8 +31,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes),
-    MatTableModule
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

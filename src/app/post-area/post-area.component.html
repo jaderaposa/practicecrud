@@ -10,7 +10,9 @@
             </tr>
         </thead>
         <tbody>
-                <app-post *ngFor="let post of listOfShoes; let i = index" [post]="post" [index]='i'></app-post>
+            <tr *ngFor="let post of listOfShoes; let i = index">
+                <app-post [post]="post" [index]="i" ></app-post>
+            </tr>
         </tbody>
     </table>
 </div>
